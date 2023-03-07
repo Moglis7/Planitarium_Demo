@@ -4,18 +4,13 @@
 	<include url="./components/videoPlayer.xml" />
 	<include url="./components/link.xml" />
 	<include url="./components/book.xml" />
-	<!-- <include url="./components/map.xml" /> -->
+	<include url="./components/tooltips.xml" />
 	<!-- <include url="./components/map.xml" /> -->
 	 
-	<include url="./plugins/showtext.xml" />
-	<textstyle name="SKIN_TOOLTIPS" font="Arial" fontsize="16" bold="true" italic="false" background="false" border="false" textcolor="0xFFFFFF" effect="dropshadow(1,45,0x000000,4,1);" fadeintime="0.1" fadetime="0.05" />
-	<style name="tooltip"
-	       onover="copy(layer[tooltip].html, tooltip);
-	               set(layer[tooltip].visible, true);
-	               tween(layer[tooltip].alpha, 1.0, 0.5);
-	               asyncloop(hovering, copy(layer[tooltip].x,mouse.stagex); copy(layer[tooltip].y,mouse.stagey); );"
-	       onout="tween(layer[tooltip].alpha, 0.0, 0.25, default, set(layer[tooltip].visible,false), copy(layer[tooltip].x,mouse.stagex); copy(layer[tooltip].y,mouse.stagey); );"
-	       />
+
+
+
+
 
  
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
