@@ -3,8 +3,8 @@
 		activeSpot="../skin/camicon_red.png" 
 		fsButtonMax="./UI/MAX.png" 
 		fsButtonMin="./UI/MIN.png" 
-		fsX="120"
-		fsY="760"
+		fsX="-50"
+		fsY="756"
 		>	
 	
 	<textstyle name="message2"
