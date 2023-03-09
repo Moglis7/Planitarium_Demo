@@ -13,13 +13,6 @@
 
 	<events name="orientation" keep="true" onresize="closemap();"  />
 	<events name="book_visibility" keep="true" onresize="popup_close();" onnewscene="toogle_book_visibility()" />
-	
-	 
-
-
-
-
-
  
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="true" 
@@ -91,7 +84,7 @@
 
 	
 	<scene name="scene_1" 
-	       title="1" onstart="" thumburl="panos/R0010168.tiles/thumb.jpg" lat="35.04320000" lng="33.23698333" heading="0.0">
+	       title="1" onstart="updateradar();" thumburl="panos/R0010168.tiles/thumb.jpg" lat="35.04320000" lng="33.23698333" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
