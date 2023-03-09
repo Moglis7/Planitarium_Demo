@@ -1,4 +1,4 @@
-<krpano mapImage="../skin/inmap3.png" 
+<krpano mapImage="../skin/inmap4.png" 
 		mapSpot="../skin/camicon.png" 
 		activeSpot="../skin/camicon_red.png" 
 		fsButtonMax="./UI/MAX.png" 
@@ -51,10 +51,10 @@
 
 
 	<!-- the map spot images -->
-	<style name="mapspot" keep="true" url="get:mapSpot" scale="0.1" parent="map" align="lefttop" edge="center" scale.mobile="0.1" />
+	<style name="mapspot" keep="true" url="get:mapSpot" scale="0.13" parent="map" align="lefttop" edge="center" scale.mobile="0.1" />
 	<style name="fsButton" keep="true" url="get:fsButtonMax" scale="3"  parent="map" align="lefttop" edge="center" scale.mobile="3" onclick="openmap();" />
 		<!-- active spot image (overlays the normal spot) -->
-	<layer name="activespot" url="get:activeSpot" keep="true" align="lefttop" zorder="2" scale="0.1" scale.mobile="0.1"/>
+	<layer name="activespot" url="get:activeSpot" keep="true" align="lefttop" zorder="2" scale="0.13" scale.mobile="0.1"/>
 
 		<!-- full screen btn on map -->
 	<layer name="fs" style="fsButton|tooltip" tooltip="Expand" x="get:fsX" y="get:fsY" zorder="1"  />
