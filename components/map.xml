@@ -1,23 +1,6 @@
-<krpano mapImage="../skin/inmap6.png">
+<krpano>
 
-	<!-- tooltips textstyle -->
-	<textstyle name="spot_message"
-			font="Arial" 
-			fontsize="16"
-			bold="false" 			
-			italic="false" 
-			background="true"
-            backgroundcolor="0xFFFFFF" 
-			backgroundalpha="1.0"
-			padding="4"
-			border="false"
-			bordercolor="0x000000"
-			borderalpha="1.0"
-			textcolor="0x000000" 
-			roundedge="5"			
-			fadeintime="0.1"
-			fadetime="0.05" />
-	<!-- effect="dropshadow(1,45,0x000000,4,1);"  -->
+	
 	
 	<textstyle name="message2"
            origin="cursor"
@@ -42,7 +25,7 @@
            backgroundcolor="0xFFFFFF"
            backgroundalpha="0.0"
            border="true"
-           bordercolor="0x000000"
+           bordercolor="0x000000" 
            borderalpha="1.0"
            borderwidth="1.0"
            roundedge="0"
@@ -67,7 +50,7 @@
 	<style name="fsButton" keep="true" url="./UI/MAX.png" scale="3"  parent="map" align="lefttop" edge="center" scale.mobile="3" onclick="openmap();" />
 
 	<!-- the map image -->
-	<layer name="map" url=get(mapImage); keep="true" handcursor="false" capture="false"
+	<layer name="map" url="../skin/inmap6.png" keep="true" handcursor="false" capture="false"
 		align="righttop"
 		scalechildren="true"
 		onclick="openmap();"
@@ -384,15 +367,15 @@
 
 	<!-- Spots on maps -->
 	<layer name="spot1" style="mapspot" x="920" y="290" zorder="1" onclick="mapspot_loadscene(scene_1);" onhover="showtext('Lorem ipsum', spot_message)" />
-	<layer name="spot2" style="mapspot" x="920" y="360" zorder="1" onclick="mapspot_loadscene(scene_2);" onhover="showtext('Lorem ipsum 2', spot_message)"/>
+	<!-- <layer name="spot2" style="mapspot" x="920" y="360" zorder="1" onclick="mapspot_loadscene(scene_2);" onhover="showtext('Lorem ipsum 2', spot_message)"/>
 	<layer name="spot3" style="mapspot" x="920" y="420" zorder="1" onclick="mapspot_loadscene(scene_3);" />
 	<layer name="spot4" style="mapspot" x="850" y="420" zorder="1" onclick="mapspot_loadscene(scene_4);" />
 	<layer name="spot5" style="mapspot" x="770" y="420" zorder="1" onclick="mapspot_loadscene(scene_5);" />
 	<layer name="spot6" style="mapspot" x="690" y="420" zorder="1" onclick="mapspot_loadscene(scene_6);" />
 	<layer name="spot7" style="mapspot" x="620" y="550" zorder="1" onclick="mapspot_loadscene(scene_7);" />
 	<layer name="spot8" style="mapspot" x="620" y="650" zorder="1" onclick="mapspot_loadscene(scene_8);" />
-	<layer name="spot9" style="mapspot" x="770" y="550" zorder="1" onclick="mapspot_loadscene(scene_9);" />
-	<layer name="spot10" style="mapspot" x="855" y="550" zorder="1" onclick="mapspot_loadscene(scene_10);" />
+	<layer name="spot9" style="mapspot" x="770" y="550" zorder="1" onclick="mapspot_loadscene(scene_9);" /> -->
+	<!-- <layer name="spot10" style="mapspot" x="855" y="550" zorder="1" onclick="mapspot_loadscene(scene_10);" />
 	<layer name="spot11" style="mapspot" x="920" y="550" zorder="1" onclick="mapspot_loadscene(scene_11);" />
 	<layer name="spot12" style="mapspot" x="1000" y="550" zorder="1" onclick="mapspot_loadscene(scene_12);" />
 	<layer name="spot13" style="mapspot" x="1000" y="620" zorder="1" onclick="mapspot_loadscene(scene_13);" />
@@ -411,7 +394,7 @@
 	<layer name="spot27" style="mapspot" x="1640" y="500" zorder="1" onclick="mapspot_loadscene(scene_27);" />
 	<layer name="spot28" style="mapspot" x="1640" y="580" zorder="1" onclick="mapspot_loadscene(scene_28);" />
 	<layer name="spot29" style="mapspot" x="1800" y="350" zorder="1" onclick="mapspot_loadscene(scene_29);" />
-	<layer name="spot30" style="mapspot" x="1800" y="450" zorder="1" onclick="mapspot_loadscene(scene_30);" />
+	<layer name="spot30" style="mapspot" x="1800" y="450" zorder="1" onclick="mapspot_loadscene(scene_30);" /> -->
 
 	
 

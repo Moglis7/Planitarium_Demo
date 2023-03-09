@@ -1,4 +1,4 @@
-<krpano vp_minimized='false' vp_video='./planitarium.mp4' vp_jpg='./planitarium00.jpg' volume="0.8" close_btn="./UI/CLOSE3.png">
+<krpano vp_minimized='false' vp_video='./video/planitarium.mp4' vp_jpg='./video/planitarium00.jpg' volume="0.8" close_btn="./UI/CLOSE3.png">
         
 
     <include url="../plugins/showtext.xml" />

@@ -1,5 +1,24 @@
 
 <krpano>
+
+    <!-- tooltips textstyle -->
+	<textstyle name="spot_message"
+			font="Arial" 
+			fontsize="16"
+			bold="false" 			
+			italic="false" 
+			background="true"
+            backgroundcolor="0xFFFFFF" 
+			backgroundalpha="1.0"
+			padding="4"
+			border="false"
+			bordercolor="0x000000"
+			borderalpha="1.0"
+			textcolor="0x000000" 
+			roundedge="5"			
+			fadeintime="0.1"
+			fadetime="0.05" />
+	<!-- effect="dropshadow(1,45,0x000000,4,1);"  -->
   
     <style name="infospot"
         keep="false"

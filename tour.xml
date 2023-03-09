@@ -1,13 +1,19 @@
 ﻿<krpano version="1.20.11" title="Planitarium">
 
+	<include url="./components/styles.xml" />
 	<include url="./skin/vtourskin.xml" />
 	<include url="./components/videoPlayer.xml" />
 	<include url="./components/link.xml" />
 	<include url="./components/book.xml" />
 	<include url="./components/tooltips.xml" />
-	<!-- <include url="./components/map.xml" /> -->
+	<include url="./components/map.xml" />
 	<!-- <include url="./components/audioPlayer.xml" /> -->
-	<include url= "./components/styles.xml" />
+
+
+
+	<events name="orientation" keep="true" onresize="closemap();"  />
+	<events name="book_visibility" keep="true" onresize="popup_close();" onnewscene="toogle_book_visibility()" />
+	
 	 
 
 
@@ -84,7 +90,7 @@
 
 
 	
-	<scene name="scene_R0010168" 
+	<scene name="scene_1" 
 	       title="1" onstart="" thumburl="panos/R0010168.tiles/thumb.jpg" lat="35.04320000" lng="33.23698333" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
@@ -117,9 +123,17 @@
 				 />	 	
 		<!-- End of section -->
 
+
+		<action name="updateradar">
+			set(layer[activespot].parent, spot1);
+			set(layer[radar].parent, spot1);
+			set(layer[radar].heading, 123);
+			set(layer[radar].enable, false);
+		</action>
+
 	</scene>
 
-	<scene name="scene_R0010169" title="2" onstart="" thumburl="panos/R0010169.tiles/thumb.jpg" lat="35.04313889" lng="33.23705278" heading="0.0">
+	<scene name="scene_2" title="2" onstart="" thumburl="panos/R0010169.tiles/thumb.jpg" lat="35.04313889" lng="33.23705278" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -135,7 +149,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010170" title="3" onstart="" thumburl="panos/R0010170.tiles/thumb.jpg" lat="35.04321944" lng="33.23713611" heading="0.0">
+	<scene name="scene_3" title="3" onstart="" thumburl="panos/R0010170.tiles/thumb.jpg" lat="35.04321944" lng="33.23713611" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -152,7 +166,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010171" title="4" onstart="" thumburl="panos/R0010171.tiles/thumb.jpg" lat="35.04323056" lng="33.23715278" heading="0.0">
+	<scene name="scene_4" title="4" onstart="" thumburl="panos/R0010171.tiles/thumb.jpg" lat="35.04323056" lng="33.23715278" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -170,7 +184,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010173" title="5" onstart="" thumburl="panos/R0010173.tiles/thumb.jpg" lat="35.04322500" lng="33.23701667" heading="0.0">
+	<scene name="scene_5" title="5" onstart="" thumburl="panos/R0010173.tiles/thumb.jpg" lat="35.04322500" lng="33.23701667" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -185,7 +199,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010174" title="6" onstart="" thumburl="panos/R0010174.tiles/thumb.jpg" lat="35.04294167" lng="33.23705833" heading="0.0">
+	<scene name="scene_6" title="6" onstart="" thumburl="panos/R0010174.tiles/thumb.jpg" lat="35.04294167" lng="33.23705833" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -201,7 +215,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010175" title="7" onstart="" thumburl="panos/R0010175.tiles/thumb.jpg" lat="35.04284167" lng="33.23716667" heading="0.0">
+	<scene name="scene_7" title="7" onstart="" thumburl="panos/R0010175.tiles/thumb.jpg" lat="35.04284167" lng="33.23716667" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -216,7 +230,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010176" title="8" onstart="" thumburl="panos/R0010176.tiles/thumb.jpg" lat="35.04333056" lng="33.23625000" heading="0.0">
+	<scene name="scene_8" title="8" onstart="" thumburl="panos/R0010176.tiles/thumb.jpg" lat="35.04333056" lng="33.23625000" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -231,7 +245,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010177" title="9" onstart="" thumburl="panos/R0010177.tiles/thumb.jpg" lat="35.04342222" lng="33.23691667" heading="0.0">
+	<scene name="scene_9" title="9" onstart="" thumburl="panos/R0010177.tiles/thumb.jpg" lat="35.04342222" lng="33.23691667" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
