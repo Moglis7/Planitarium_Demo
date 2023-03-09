@@ -1,12 +1,13 @@
-﻿<krpano version="1.20.11" title="Virtual Tour">
+﻿<krpano version="1.20.11" title="Planitarium">
 
 	<include url="./skin/vtourskin.xml" />
-	<!-- <include url="./components/videoPlayer.xml" /> -->
+	<include url="./components/videoPlayer.xml" />
 	<include url="./components/link.xml" />
 	<include url="./components/book.xml" />
 	<include url="./components/tooltips.xml" />
 	<!-- <include url="./components/map.xml" /> -->
 	<!-- <include url="./components/audioPlayer.xml" /> -->
+	<include url= "./components/styles.xml" />
 	 
 
 
@@ -78,16 +79,17 @@
 	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
 	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
 	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
-	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<include url="skin/vtourskin_design_117round.xml"    />
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
 
 	
-	<scene name="scene_R0010168" title="R0010168" onstart="" thumburl="panos/R0010168.tiles/thumb.jpg" lat="35.04320000" lng="33.23698333" heading="0.0">
+	<scene name="scene_R0010168" 
+	       title="1" onstart="" thumburl="panos/R0010168.tiles/thumb.jpg" lat="35.04320000" lng="33.23698333" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0" vlookat="2.899" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/R0010168.tiles/preview.jpg" />
 
@@ -96,9 +98,28 @@
 		</image>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-128.409" atv="29.034" linkedscene="scene_r0010169" />
 
+		<hotspot name="info_button"
+		         style="infospot"
+		         tx="-200"
+		         ty="0"
+		         tz="600" 
+		         onclick="show_info_text(scene_R0010168, info_image, -348,-49,-213, -90,0, 108); lookto(25,12,100 , smooth(100,100,200);"/> 
+
+		<hotspot name="info_image"
+		         style="infospotimage"
+		         tx="250"
+		         ty="100"
+		         tz="600"
+		         ath="25"
+		         atv="10"   
+		         url="/UI/1.png"
+				 onclick="set(alpha, 0.0);"  
+				 />	 	
+		<!-- End of section -->
+
 	</scene>
 
-	<scene name="scene_R0010169" title="R0010169" onstart="" thumburl="panos/R0010169.tiles/thumb.jpg" lat="35.04313889" lng="33.23705278" heading="0.0">
+	<scene name="scene_R0010169" title="2" onstart="" thumburl="panos/R0010169.tiles/thumb.jpg" lat="35.04313889" lng="33.23705278" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -114,7 +135,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010170" title="R0010170" onstart="" thumburl="panos/R0010170.tiles/thumb.jpg" lat="35.04321944" lng="33.23713611" heading="0.0">
+	<scene name="scene_R0010170" title="3" onstart="" thumburl="panos/R0010170.tiles/thumb.jpg" lat="35.04321944" lng="33.23713611" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -131,7 +152,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010171" title="R0010171" onstart="" thumburl="panos/R0010171.tiles/thumb.jpg" lat="35.04323056" lng="33.23715278" heading="0.0">
+	<scene name="scene_R0010171" title="4" onstart="" thumburl="panos/R0010171.tiles/thumb.jpg" lat="35.04323056" lng="33.23715278" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -149,7 +170,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010173" title="R0010173" onstart="" thumburl="panos/R0010173.tiles/thumb.jpg" lat="35.04322500" lng="33.23701667" heading="0.0">
+	<scene name="scene_R0010173" title="5" onstart="" thumburl="panos/R0010173.tiles/thumb.jpg" lat="35.04322500" lng="33.23701667" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -164,7 +185,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010174" title="R0010174" onstart="" thumburl="panos/R0010174.tiles/thumb.jpg" lat="35.04294167" lng="33.23705833" heading="0.0">
+	<scene name="scene_R0010174" title="6" onstart="" thumburl="panos/R0010174.tiles/thumb.jpg" lat="35.04294167" lng="33.23705833" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -180,7 +201,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010175" title="R0010175" onstart="" thumburl="panos/R0010175.tiles/thumb.jpg" lat="35.04284167" lng="33.23716667" heading="0.0">
+	<scene name="scene_R0010175" title="7" onstart="" thumburl="panos/R0010175.tiles/thumb.jpg" lat="35.04284167" lng="33.23716667" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -195,7 +216,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010176" title="R0010176" onstart="" thumburl="panos/R0010176.tiles/thumb.jpg" lat="35.04333056" lng="33.23625000" heading="0.0">
+	<scene name="scene_R0010176" title="8" onstart="" thumburl="panos/R0010176.tiles/thumb.jpg" lat="35.04333056" lng="33.23625000" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -210,7 +231,7 @@
 
 	</scene>
 
-	<scene name="scene_R0010177" title="R0010177" onstart="" thumburl="panos/R0010177.tiles/thumb.jpg" lat="35.04342222" lng="33.23691667" heading="0.0">
+	<scene name="scene_R0010177" title="9" onstart="" thumburl="panos/R0010177.tiles/thumb.jpg" lat="35.04342222" lng="33.23691667" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -224,6 +245,5 @@
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="121.560" atv="25.395" linkedscene="scene_r0010170" />
 
 	</scene>
-
 
 </krpano>

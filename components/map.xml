@@ -1,4 +1,4 @@
-<krpano>
+<krpano mapImage="../skin/inmap6.png">
 
 	<!-- tooltips textstyle -->
 	<textstyle name="spot_message"
@@ -67,7 +67,7 @@
 	<style name="fsButton" keep="true" url="./UI/MAX.png" scale="3"  parent="map" align="lefttop" edge="center" scale.mobile="3" onclick="openmap();" />
 
 	<!-- the map image -->
-	<layer name="map" url="../skin/inmap6.png" keep="true" handcursor="false" capture="false"
+	<layer name="map" url=get(mapImage); keep="true" handcursor="false" capture="false"
 		align="righttop"
 		scalechildren="true"
 		onclick="openmap();"
