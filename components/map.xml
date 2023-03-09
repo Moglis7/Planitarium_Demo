@@ -1,4 +1,4 @@
-<krpano mapImage="../skin/inmap2.png" 
+<krpano mapImage="../skin/inmap3.png" 
 		mapSpot="../skin/camicon.png" 
 		activeSpot="../skin/camicon_red.png" 
 		fsButtonMax="./UI/MAX.png" 
