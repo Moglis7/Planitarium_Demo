@@ -1,4 +1,4 @@
-<krpano>
+<krpano mapImage="../skin/inmap.png" mapSpot="../skin/camicon.png" activeSpot="../skin/camicon_red.png" fsButtonMax="./UI/MAX.png" fsButtonMin="./UI/MIN.png" >
 
 	
 	
@@ -46,11 +46,16 @@
 
 
 	<!-- the map spot images -->
-	<style name="mapspot" keep="true" url="../skin/camicon.png" scale="0.1" parent="map" align="lefttop" edge="center" scale.mobile="0.1" />
-	<style name="fsButton" keep="true" url="./UI/MAX.png" scale="3"  parent="map" align="lefttop" edge="center" scale.mobile="3" onclick="openmap();" />
+	<style name="mapspot" keep="true" url="get:mapSpot" scale="0.1" parent="map" align="lefttop" edge="center" scale.mobile="0.1" />
+	<style name="fsButton" keep="true" url="get:fsButtonMax" scale="3"  parent="map" align="lefttop" edge="center" scale.mobile="3" onclick="openmap();" />
+		<!-- active spot image (overlays the normal spot) -->
+	<layer name="activespot" url="get:activeSpot" keep="true" align="lefttop" zorder="2" scale="0.1" scale.mobile="0.1"/>
+
+		<!-- full screen btn on map -->
+	<layer name="fs" style="fsButton|tooltip" tooltip="Expand" x="120" y="760" zorder="1"  />
 
 	<!-- the map image -->
-	<layer name="map" url="../skin/inmap.png" keep="true" handcursor="false" capture="false"
+	<layer name="map" url="get:mapImage" keep="true" handcursor="false" capture="false"
 		align="righttop"
 		scalechildren="true"
 		onclick="openmap();"
@@ -119,7 +124,7 @@
 	<action name="openmap">
 		set(layer[map].onclick, closemap(););
 		set(layer[fs].onclick, closemap(););
-		set(layer[fs].url, "./UI/MIN.png");
+		set(layer[fs].url, get(fsButtonMin));
 		set(layer[fs].tooltip, "Scale Down");
 		set(layer[fs].scale, 1);
 		
@@ -188,7 +193,7 @@
 	<action name="closemap">		
 		set(layer[map].onclick, openmap(); );
 		set(layer[fs].onclick, openmap(); );
-		set(layer[fs].url, "./UI/MAX.png");
+		set(layer[fs].url, get(fsButtonMax));
 		set(layer[fs].tooltip, "Expand");
 		set(layer[fs].scale, 3);
 		<!-- set the map in the righttop of the screen --> 
@@ -251,8 +256,7 @@
 	</action>
 
 	<!-- map closing - scale the map back to 0.25 of its image pixelsize -->
-	<action name="closemap2">
-		
+	<action name="closemap2">		
 		set(layer[map].onclick, openmap(); );
 		set(layer[fs].onclick, openmap(); );
 		set(layer[fs].crop, "0|576|64|64");
@@ -359,22 +363,20 @@
 		js(console.log(get(layer[%1].onclick)));
 	</action> -->
 
-	<!-- active spot image (overlays the normal spot) -->
-	<layer name="activespot" url="../skin/camicon_red.png" keep="true" align="lefttop" zorder="2" scale="0.1" scale.mobile="0.1"/>
 
-	<!-- full screen btn on map -->
-	<layer name="fs" style="fsButton|tooltip" tooltip="Expand" x="120" y="760" zorder="1"  />
+
+
 
 	<!-- Spots on maps -->
 	<layer name="spot1" style="mapspot" x="920" y="290" zorder="1" onclick="mapspot_loadscene(scene_1);" onhover="showtext('Lorem ipsum', spot_message)" />
-	<!-- <layer name="spot2" style="mapspot" x="920" y="360" zorder="1" onclick="mapspot_loadscene(scene_2);" onhover="showtext('Lorem ipsum 2', spot_message)"/>
+	<layer name="spot2" style="mapspot" x="920" y="360" zorder="1" onclick="mapspot_loadscene(scene_2);" onhover="showtext('Lorem ipsum 2', spot_message)"/>
 	<layer name="spot3" style="mapspot" x="920" y="420" zorder="1" onclick="mapspot_loadscene(scene_3);" />
 	<layer name="spot4" style="mapspot" x="850" y="420" zorder="1" onclick="mapspot_loadscene(scene_4);" />
 	<layer name="spot5" style="mapspot" x="770" y="420" zorder="1" onclick="mapspot_loadscene(scene_5);" />
 	<layer name="spot6" style="mapspot" x="690" y="420" zorder="1" onclick="mapspot_loadscene(scene_6);" />
 	<layer name="spot7" style="mapspot" x="620" y="550" zorder="1" onclick="mapspot_loadscene(scene_7);" />
 	<layer name="spot8" style="mapspot" x="620" y="650" zorder="1" onclick="mapspot_loadscene(scene_8);" />
-	<layer name="spot9" style="mapspot" x="770" y="550" zorder="1" onclick="mapspot_loadscene(scene_9);" /> -->
+	<layer name="spot9" style="mapspot" x="770" y="550" zorder="1" onclick="mapspot_loadscene(scene_9);" />
 	<!-- <layer name="spot10" style="mapspot" x="855" y="550" zorder="1" onclick="mapspot_loadscene(scene_10);" />
 	<layer name="spot11" style="mapspot" x="920" y="550" zorder="1" onclick="mapspot_loadscene(scene_11);" />
 	<layer name="spot12" style="mapspot" x="1000" y="550" zorder="1" onclick="mapspot_loadscene(scene_12);" />
