@@ -1,6 +1,11 @@
-<krpano mapImage="../skin/inmap2.png" mapSpot="../skin/camicon.png" activeSpot="../skin/camicon_red.png" fsButtonMax="./UI/MAX.png" fsButtonMin="./UI/MIN.png" >
-
-	
+<krpano mapImage="../skin/inmap2.png" 
+		mapSpot="../skin/camicon.png" 
+		activeSpot="../skin/camicon_red.png" 
+		fsButtonMax="./UI/MAX.png" 
+		fsButtonMin="./UI/MIN.png" 
+		fsX="120"
+		fsY="760"
+		>	
 	
 	<textstyle name="message2"
            origin="cursor"
@@ -52,7 +57,7 @@
 	<layer name="activespot" url="get:activeSpot" keep="true" align="lefttop" zorder="2" scale="0.1" scale.mobile="0.1"/>
 
 		<!-- full screen btn on map -->
-	<layer name="fs" style="fsButton|tooltip" tooltip="Expand" x="120" y="760" zorder="1"  />
+	<layer name="fs" style="fsButton|tooltip" tooltip="Expand" x="get:fsX" y="get:fsY" zorder="1"  />
 
 	<!-- the map image -->
 	<layer name="map" url="get:mapImage" keep="true" handcursor="false" capture="false"
