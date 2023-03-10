@@ -1,4 +1,4 @@
-﻿<krpano version="1.20.11" title="Planitarium">
+﻿<krpano version="1.20.11" title="Planetarium">
 
 	<include url="./components/styles.xml" />
 	<include url="./skin/vtourskin.xml" />
