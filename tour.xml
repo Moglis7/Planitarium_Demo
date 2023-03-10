@@ -1,12 +1,12 @@
 ﻿<krpano version="1.20.11" title="Planetarium">
 
-	<include url="./components/styles.xml" />
-	<include url="./skin/vtourskin.xml" />
-	<include url="./components/videoPlayer.xml" />
-	<include url="./components/link.xml" />
-	<include url="./components/book.xml" />
-	<include url="./components/tooltips.xml" />
-	<include url="./components/map.xml" />
+	<include url="components/styles.xml" />
+	<include url="skin/vtourskin.xml" />
+	<include url="components/videoPlayer.xml" />
+	<include url="components/link.xml" />
+	<include url="components/book.xml" />
+	<include url="components/tooltips.xml" />
+	<include url="components/map.xml" />
 	<!-- <include url="./components/audioPlayer.xml" /> -->
 
 
@@ -111,7 +111,7 @@
 		         tz="600"
 		         ath="25"
 		         atv="10"   
-		         url="/UI/1.png"
+		         url="./UI/1.png"
 				 onclick="set(alpha, 0.0);"  
 				 />	 	
 		<!-- End of section -->
